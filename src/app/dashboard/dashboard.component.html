@@ -1,0 +1,12 @@
+
+<app-hero-search></app-hero-search>
+
+<div class=" flex flex-row gap-3 mt-6 text-center	p-3 flex-wrap	justify-center">
+  <a class="w-44 grayscale hover:grayscale-0 hover:ease-in  duration-300 bg-slate-500/50" *ngFor="let hero of heroes"
+      routerLink="/detail/{{hero.id}}">
+      <img class="" src="{{hero.thumbnail.path}}.{{hero.thumbnail.extension}}" alt="">
+      <p class="text-cente ">{{hero.name}}</p>
+  </a>
+
+</div>
+

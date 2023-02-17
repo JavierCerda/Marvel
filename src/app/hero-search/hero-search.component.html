@@ -1,0 +1,15 @@
+<div class="flex content-start justify-center mt-5 flex-col">
+  <div class="flex justify-center">
+    <input class="text-black rounded-md w-[40%]" #searchBox (input)="search(searchBox.value)" placeholder=" Buscar"/>
+  </div>
+
+  <div class="flex justify-center">
+    <ul>
+      <li class=" hover:bg-red-700 h-[20%] p-3" *ngFor="let hero of heroes$ | async" >
+        <a class=" h-[100%] " routerLink="/detail/{{hero.id}}">
+          - {{hero.name}} 
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

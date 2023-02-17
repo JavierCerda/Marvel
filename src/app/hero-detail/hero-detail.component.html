@@ -1,0 +1,6 @@
+<div *ngIf="heroes" class="mt-[5%] flex flex-col gap-4">
+  <div><img class="rounded-lg w-60 h-80 inline-block" src="{{heroes.thumbnail.path}}.{{heroes.thumbnail.extension}}" alt=""></div> 
+  <div><h2>{{heroes.name}}</h2></div>
+  <div *ngIf="heroes.description" class="bg-slate-600/50 p-2 rounded-lg m-5"><p>{{heroes.description}}</p></div>
+</div>
+<button class="text-red-700 mb-2" type="button" (click)="goBack()">go back</button>
