@@ -2,12 +2,13 @@
   <div class="">
     <div class="flex flex-row flex-wrap justify-center content-center mt-[3%] mb-[3%] gap-3">
       <li class="bg-slate-600 rounded-lg" *ngFor="let hero of heroes">
-        <a routerLink="/detail/{{hero.id}}">
-          <img class="rounded-l-lg w-28 h-28 inline-block" src="{{hero.thumbnail.path}}.{{hero.thumbnail.extension}}" alt=""> 
-          {{hero.id}}
-          {{hero.name}}
-           
-        </a>
+        <div class="w-52">
+          <a routerLink="/detail/{{hero.id}}">
+            <img class="rounded-l-lg w-28 h-28 inline-block" src="{{hero.thumbnail.path}}.{{hero.thumbnail.extension}}" alt=""> 
+            {{hero.id}}
+            {{hero.name}}  
+          </a>
+        </div>
       </li>
     </div>
   </div>
